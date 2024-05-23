@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.lv10.HelloController">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <children>
+      <TableView fx:id="tableViewGradovi" prefHeight="370.0" prefWidth="341.0" GridPane.rowSpan="5">
+        <columns>
+          <TableColumn fx:id="colGradId" prefWidth="50.0" text="ID" />
+          <TableColumn fx:id="colGradNaziv" prefWidth="75.0" text="Naziv" />
+          <TableColumn fx:id="colGradStanovnika" prefWidth="75.0" text="Stanovnika" />
+          <TableColumn fx:id="colGradDrzava" minWidth="70.0" prefWidth="-1.0" text="Drzava" />
+        </columns>
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button minWidth="86.4" mnemonicParsing="false" onAction="#openGradForm" text="Dodaj grad" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin></Button>
+      <Button minWidth="86.4" mnemonicParsing="false" onAction="#openDrzavaForm" text="Dodaj drzavu" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button minWidth="86.4" mnemonicParsing="false" onAction="#openGradForm" text="Izmijeni grad" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button minWidth="86.4" mnemonicParsing="false" onAction="#openGradForm" text="Obrisi grad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   </children>  
+</GridPane>
